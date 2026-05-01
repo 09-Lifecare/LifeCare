@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - LifeCare</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="../index.html" class="logo">LifeCare</a>
+            <div class="nav-links">
+                <a href="../index.html">Home</a>
+                <a href="features.html">Features</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="login.html">Login</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- CONTACT SECTION -->
+    <section style="padding: 80px 2rem; max-width: 800px; margin: 0 auto;">
+        <h1 style="font-size: 3rem; margin-bottom: 2rem; text-align: center;">Get in Touch</h1>
+        
+        <div style="background-color: #F5F7FA; padding: 2rem; border-radius: 10px; margin-bottom: 2rem;">
+            <h2 style="color: #4A90E2; margin-bottom: 1.5rem;">Contact Information</h2>
+            <p style="margin-bottom: 1rem;"><strong>Email:</strong> support@lifecare.com</p>
+            <p style="margin-bottom: 1rem;"><strong>Phone:</strong> +1 (555) 123-4567</p>
+            <p style="margin-bottom: 1rem;"><strong>Address:</strong> 123 Health Street, Medical City, MC 12345</p>
+        </div>
+
+        <h2 style="color: #4A90E2; margin-bottom: 1.5rem; text-align: center;">Send us a Message</h2>
+        
+        <form onsubmit="submitForm(event)" style="background-color: #F5F7FA; padding: 2rem; border-radius: 10px;">
+            <div class="form-group">
+                <label>Full Name</label>
+                <input type="text" id="contactName" placeholder="Your name" required>
+            </div>
+            <div class="form-group">
+                <label>Email</label>
+                <input type="email" id="contactEmail" placeholder="your@email.com" required>
+            </div>
+            <div class="form-group">
+                <label>Subject</label>
+                <input type="text" id="contactSubject" placeholder="How can we help?" required>
+            </div>
+            <div class="form-group">
+                <label>Message</label>
+                <textarea id="contactMessage" placeholder="Your message..." required style="width: 100%; height: 150px; padding: 0.8rem; border: 1px solid #E0E6ED; border-radius: 5px; font-family: 'Poppins', sans-serif;"></textarea>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn-primary" style="width: 100%; padding: 1rem;">Send Message</button>
+            </div>
+        </form>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2026 LifeCare. All rights reserved.</p>
+    </footer>
+
+    <script src="../js/auth.js"></script>
+    <script>
+        function submitForm(event) {
+            event.preventDefault();
+            alert('Thank you for your message! We will get back to you soon.');
+            document.querySelector('form').reset();
+        }
+    </script>
+</body>
+</html>

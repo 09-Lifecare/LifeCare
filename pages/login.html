@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - LifeCare</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="../index.html" class="logo">LifeCare</a>
+        </div>
+    </nav>
+
+    <!-- LOGIN/SIGNUP CONTAINER -->
+    <div class="auth-container">
+        <!-- LOGIN FORM -->
+        <div id="loginForm">
+            <h2>Welcome Back</h2>
+            <div class="form-group">
+                <label>Email</label>
+                <input type="email" id="loginEmail" placeholder="your@email.com">
+            </div>
+            <div class="form-group">
+                <label>Password</label>
+                <input type="password" id="loginPassword" placeholder="••••••••">
+            </div>
+            <div class="form-group">
+                <button onclick="login()">Login</button>
+            </div>
+            <div class="auth-toggle">
+                Don't have an account? <a onclick="toggleAuth()">Sign up</a>
+            </div>
+            <div style="margin-top: 1rem; padding: 1rem; background: #E8F4F8; border-radius: 5px; font-size: 0.9rem;">
+                <p><strong>Demo Account:</strong></p>
+                <p>Email: sarah@lifecare.com</p>
+                <p>Password: password123</p>
+            </div>
+        </div>
+
+        <!-- SIGNUP FORM -->
+        <div id="signupForm" class="hidden">
+            <h2>Create Account</h2>
+            <div class="form-group">
+                <label>Full Name</label>
+                <input type="text" id="signupName" placeholder="Your name">
+            </div>
+            <div class="form-group">
+                <label>Email</label>
+                <input type="email" id="signupEmail" placeholder="your@email.com">
+            </div>
+            <div class="form-group">
+                <label>Password</label>
+                <input type="password" id="signupPassword" placeholder="••••••••">
+            </div>
+            <div class="form-group">
+                <label>Role</label>
+                <select id="signupRole">
+                    <option>Student</option>
+                    <option>Nursing Student</option>
+                    <option>Teacher</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <button onclick="signup()">Sign Up</button>
+            </div>
+            <div class="auth-toggle">
+                Already have an account? <a onclick="toggleAuth()">Login</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/auth.js"></script>
+</body>
+</html>

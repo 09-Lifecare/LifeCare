@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LifeCare - Student Health Management</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="logo">LifeCare</div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="pages/features.html">Features</a>
+                <a href="pages/about.html">About</a>
+                <a href="pages/contact.html">Contact</a>
+                <span id="userDisplay" style="margin-left: 30px;"></span>
+                <button onclick="logout()" id="logoutBtn" style="display:none; margin-left: 10px;">Logout</button>
+                <a href="pages/login.html" id="loginLink">Login</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Minimize Stress, Maximize Health</h1>
+            <p>Your all-in-one platform for managing health, tasks, expenses, and clinical duties</p>
+            <button class="btn-primary" onclick="goToLogin()">Get Started</button>
+        </div>
+    </section>
+
+    <!-- FEATURES PREVIEW -->
+    <section class="features-preview">
+        <h2>What LifeCare Offers</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="icon">❤️</div>
+                <h3>Health Management</h3>
+                <p>Track medical history, medications, and symptoms</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">✅</div>
+                <h3>Task Management</h3>
+                <p>Organize your to-do list and deadlines</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">💰</div>
+                <h3>Budget Tracking</h3>
+                <p>Monitor expenses and manage your finances</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">📅</div>
+                <h3>Duty Scheduler</h3>
+                <p>Plan your clinical shifts and responsibilities</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2026 LifeCare. All rights reserved.</p>
+    </footer>
+
+    <script src="js/auth.js"></script>
+    <script>
+        function goToLogin() {
+            window.location.href = 'pages/login.html';
+        }
+    </script>
+</body>
+</html>

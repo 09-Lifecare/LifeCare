@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - LifeCare</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="logo">LifeCare Dashboard</div>
+            <div class="nav-links">
+                <a href="../index.html">Home</a>
+                <span id="userDisplay"></span>
+                <button onclick="logout()" style="margin-left: 10px;">Logout</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- DASHBOARD CONTAINER -->
+    <div class="dashboard-container">
+        <!-- SIDEBAR -->
+        <div class="sidebar">
+            <div id="dashboard-link" class="sidebar-item active" onclick="showDashboard()">📊 Dashboard</div>
+            <div id="health-link" class="sidebar-item" onclick="showHealth()">❤️ Health</div>
+            <div id="tasks-link" class="sidebar-item" onclick="showTasks()">✅ Tasks</div>
+            <div id="expenses-link" class="sidebar-item" onclick="showExpenses()">💰 Expenses</div>
+            <div id="duty-link" class="sidebar-item" onclick="showDuty()">📅 Duty</div>
+            <div id="profile-link" class="sidebar-item" onclick="showProfile()">👤 Profile</div>
+        </div>
+
+        <!-- MAIN CONTENT -->
+        <div class="main-content">
+            <!-- DASHBOARD SECTION -->
+            <div id="dashboard">
+                <h2>📊 Dashboard Overview</h2>
+                <div id="overviewContent"></div>
+            </div>
+
+            <!-- HEALTH SECTION -->
+            <div id="health" class="hidden">
+                <h2>❤️ Health Tracker</h2>
+                <div id="healthContent" class="widget"></div>
+            </div>
+
+            <!-- TASKS SECTION -->
+            <div id="tasks" class="hidden">
+                <h2>✅ My Tasks</h2>
+                <div id="tasksContent" class="widget"></div>
+            </div>
+
+            <!-- EXPENSES SECTION -->
+            <div id="expenses" class="hidden">
+                <h2>💰 Expense Tracker</h2>
+                <div id="expensesContent" class="widget"></div>
+            </div>
+
+            <!-- DUTY SECTION -->
+            <div id="duty" class="hidden">
+                <h2>📅 Duty Scheduler</h2>
+                <div id="dutyContent" class="widget"></div>
+            </div>
+
+            <!-- PROFILE SECTION -->
+            <div id="profile" class="hidden">
+                <h2>👤 My Profile</h2>
+                <div id="profileContent" class="widget"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/auth.js"></script>
+    <script src="../js/dashboard.js"></script>
+</body>
+</html>
